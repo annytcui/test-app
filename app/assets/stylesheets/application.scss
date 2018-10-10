@@ -1,6 +1,53 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+/* home */
+.jumbotron {
+  margin-top: 6vh;
+}
+
+/* signup form */
 .form-group {
   width: 80%;
+}
+
+/* Profiles */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profiles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  img {
+   border: 3px solid #e6e8ed;
+   border-radius: 100%;
+   height: 20vw;
+   width: 20vw;
+  }
+}
+
+.slogan {
+  border-bottom: 1px solid #e6e8ed;
+  margin-top: 50px;
+}
+
+.profile-one, .profile-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 120px;
+}
+
+.bio-copy {
+  width: 25vw;
+  .card-title {
+    text-align: center;
+  }
 }

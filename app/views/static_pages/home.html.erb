@@ -6,22 +6,46 @@
         <p class="lead">Your reliable U.S. visa consultant</p>
       </div>
       <div class="col col-5">
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Remember me</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Sign me up</button>
-        </form>
+        <%= render 'shared/sign_up_form' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="profile-container">
+  <div class="slogan">
+    <h1 class="display-4">We Can Help</h1>
+  </div>
+  <div class="profiles">
+    <div class="profile-one">
+      <%= link_to image_tag("tianyuan.png", alt: "Tianyuan Cui Pan"), 'https://github.com/tianyuancuipan', target: :_blank %>
+      <div class="bio-copy">
+        <div class="card-body">
+          <h5 class="card-title">Tianyuan Cui Pan <span class="badge badge-pill badge-info">Co-Founder</span></h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">BRIDE</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="profile-two">
+      <%= link_to image_tag("mark.png", alt: "Mark Cui Pan"), 'https://markcuipan.com/', target: :_blank %>
+      <div class="bio-copy">
+        <div class="card-body">
+          <h5 class="card-title">Mark Cui Pan <span class="badge badge-pill badge-success">Co-Founder</span></h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">GROOM</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col align-self-center">
+        <h1 class="display-4">Panda Visas</h1>
+        <p class="lead">Your reliable U.S. visa consultant</p>
       </div>
     </div>
   </div>
