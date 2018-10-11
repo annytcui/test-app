@@ -1,0 +1,79 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+/* home */
+.home-container {
+  margin-top: 7vh;
+}
+
+/* signup form */
+.form-group {
+  width: 80%;
+}
+
+/* Profiles */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slogan {
+  border-bottom: 1px solid #e6e8ed;
+  margin: 50px auto 25px;
+}
+
+.profiles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  img {
+   border: 3px solid #e6e8ed;
+   border-radius: 100%;
+   height: 20vw;
+   width: 20vw;
+  }
+}
+
+.profile-one, .profile-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 120px 0px;
+}
+
+.bio-copy {
+  width: 25vw;
+  .card-title {
+    text-align: center;
+  }
+}
+
+/* benefits */
+.benefits-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit {
+  max-width: 18rem;
+  margin: 15px;
+}
+
+/* footer */
+
+footer {
+  margin: 40px;
+}

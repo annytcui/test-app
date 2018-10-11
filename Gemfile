@@ -8,8 +8,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
+gem 'bootstrap', '~> 4.1.3'
 gem 'puma', '3.9.1'
-gem 'sass-rails', '5.0.6'
+gem 'sass-rails'
 gem 'uglifier', '3.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -30,6 +31,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'guard', '2.13.0'
+  gem 'guard-minitest', '2.4.4'
 end
 
 group :development do
@@ -43,8 +46,6 @@ group :test do
   gem 'rails-controller-testing', '1.0.2'
   gem 'minitest', '5.10.3'
   gem 'minitest-reporters', '1.1.14'
-  gem 'guard', '2.13.0'
-  gem 'guard-minitest', '2.4.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
