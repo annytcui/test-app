@@ -1,6 +1,5 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
-@import "flag-icon";
 
 /* home */
 .home-container {
@@ -76,5 +75,12 @@
 /* footer */
 
 footer {
-  margin: 40px;
+  margin: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 0.9rem;
+  }
 }
