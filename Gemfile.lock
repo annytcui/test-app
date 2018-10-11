@@ -241,7 +241,7 @@ DEPENDENCIES
   sass-rails
   selenium-webdriver
   spring (= 2.0.2)
-  spring-watcher-listen (= 2.0.1)
+  spring-watcher-listen
   sqlite3 (= 1.3.13)
   turbolinks (= 5.0.1)
   tzinfo-data
