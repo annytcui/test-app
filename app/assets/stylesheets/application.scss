@@ -83,6 +83,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   max-width: 80vw;
+  .flag-icons {
+    position: absolute;
+    right: 10vw;
+  }
   .email {
     color: #4d4f51;
   }
