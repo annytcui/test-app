@@ -86,11 +86,15 @@ footer {
   .flag-icons {
     position: absolute;
     right: 10vw;
-  }
-  .email {
-    color: #4d4f51;
+    img {
+      margin-left: 2px;
+    }
   }
   p {
     font-size: 1rem;
+    .email {
+      color: #4d4f51;
+      font-size: 1.2rem;
+    }
   }
 }
