@@ -98,3 +98,30 @@ footer {
     }
   }
 }
+
+/* user show page */
+
+.user-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 10vh auto;
+  width: 80vw;
+  .my-profile {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20vw;
+    img {
+      border: 2px solid #e6e8ed;
+      border-radius: 100%;
+      margin-bottom: 10px;
+      width: 15vw;
+      height: 15vw;
+    }
+  }
+  .my-content {
+
+  }
+}
