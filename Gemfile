@@ -20,6 +20,8 @@ gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.7.0'
 gem 'sprockets', '~> 3.5', '>= 3.5.2'
 gem 'bcrypt', '~> 3.1.7'
+gem 'carrierwave', '1.2.2'
+gem 'mini_magick', '4.7.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Capistrano for deployment
@@ -46,6 +48,11 @@ group :test do
   gem 'rails-controller-testing', '1.0.2'
   gem 'minitest', '5.10.3'
   gem 'minitest-reporters', '1.1.14'
+end
+
+group :production do
+  gem 'pg',  '0.20.0'
+  gem 'fog-aws', '3.3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
