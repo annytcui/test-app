@@ -1,2 +1,16 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<% provide(:title, "Log in") %>
+
+<div class="login-container">
+  <h1 class="font-weight-light">Log in</h1>
+  <div class="signin-form">
+    <%= bootstrap_form_with(url: "/login", local: true) do |f| %>
+      <%= f.email_field :email %>
+      <%= f.password_field :password %>
+      <div class="form-group">
+        <%= f.check_box :remember_me %>
+        <small id="emailHelp" class="form-text text-muted">New user? Sign up now.</small>
+      </div>
+      <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
