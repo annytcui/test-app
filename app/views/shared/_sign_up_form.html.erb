@@ -1,5 +1,5 @@
 <div class="signup-form">
-  <%= bootstrap_form_with(model: @user, local: true) do |f| %>
+  <%= bootstrap_form_with(model: @user, local: true, url: signup_path) do |f| %>
     <div class="form-row">
       <div class="col">
         <%= f.text_field :firstname, hide_label: true, placeholder: 'First name' %>
