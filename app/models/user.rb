@@ -8,5 +8,8 @@ class User < ApplicationRecord
             format: { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, presence: true, length: { minimum: 8 }, allow_nil: true
+  VALID_PW_REGEX = /\A(?=.*[a-zA-Z])(?=.*[0-9]).{8,}\z/
+  validates :password, presence: true,
+            Format: { with: VALID_PW_REGEX },
+            allow_nil: true
 end
