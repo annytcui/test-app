@@ -9,4 +9,9 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  # Returns the full name of a user.
+  def full_name(user)
+    "#{user.firstname} #{user.lastname}"
+  end
 end
