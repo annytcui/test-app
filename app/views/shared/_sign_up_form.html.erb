@@ -9,7 +9,7 @@
       </div>
     </div>
     <%= f.email_field :email, hide_label: true, placeholder: 'Email' %>
-    <%= f.password_field :password, hide_label: true, placeholder: 'Password', help: "Must be at least 6 characters long" %>
+    <%= f.password_field :password, hide_label: true, placeholder: 'Password', help: "Must include both letters and numbers (>= 8 characters)" %>
     <%= f.password_field :password_confirmation, hide_label: true, placeholder: 'Confirm password' %>
     <%= f.submit "Sign me up", class: "btn btn-primary" %>
   <% end %>
