@@ -14,7 +14,7 @@
       <%= f.password_field :password %>
       <div class="form-group">
         <%= f.check_box :remember_me %>
-        <small id="emailHelp" class="form-text text-muted">New user? Sign up now.</small>
+        <small id="emailHelp" class="form-text text-muted">New user? <%= link_to "Sign up now", root_path %>.</small>
       </div>
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
