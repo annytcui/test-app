@@ -4,9 +4,22 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
-/* signup form */
+/* forms */
 .signup-form {
   width: 80%;
+}
+
+.signin-form {
+  margin-top: 20px;
+  width: 400px;
+}
+
+.login-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  justify-content: center;
 }
 
 /* Profiles */

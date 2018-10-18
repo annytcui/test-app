@@ -1,6 +1,6 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">PandaVisas</a>
+    <a class="navbar-brand" href="/">PandaVisas</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,13 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+        <% if logged_in? %>
+          <a class="nav-link" href="<%= user_path(current_user) %>">MySpace <span class="sr-only">(current)</span></a>
+        <% else %>
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <% end %>
+
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Visas</a>
+          <a class="nav-link" href="/visas">Visas</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="/forms" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Forms
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -25,13 +31,20 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Community</a>
+          <a class="nav-link" href="/community">Community</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+
+      <% if logged_in? %>
+        <%= form_for(:session, url: "/logout", html: { method: :delete, class: "form-inline my-2 my-lg-0"}) do |f| %>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button>
+        <% end %>
+      <% else %>
+        <%= form_for(:session, url: "/login", html: { method: :get, class: "form-inline my-2 my-lg-0"}) do |f| %>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
+        <% end %>
+      <% end %>
+
     </div>
   </nav>
 </header>
