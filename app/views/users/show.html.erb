@@ -1,10 +1,32 @@
 <% provide(:title, full_name(@user)) %>
 
-<div class="user-container">
-  <div class="my-profile">
+<div class="user-container row">
+  <aside class="my-profile col-3">
     <%= image_tag "default.png" %>
-    <h5 class="font-weight-normal"><%= full_name(@user) %></h5>
+    <h6 class="font-weight-heavy"><%= full_name(@user) %></h6>
+
+  </aside>
+
+  <div class="my-content col-8">
+
+    <ul class="nav user-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Timeline</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blogs</a>
+      </li>
+    </ul>
+
+
   </div>
-  <div class="my-content">
-  </div>
+
 </div>
+
+<!--
+<%= form_for(@user, url: edit_user_path(@user), method: :patch, html: { class: 'edit-form' }) do |f| %>
+<% end %>
+-->

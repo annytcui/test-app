@@ -94,6 +94,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   max-width: 80vw;
+  .footer {
+    margin: 20px 0;
+  }
   .flag-icons {
     position: absolute;
     right: 10vw;
@@ -122,17 +125,31 @@ footer {
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 20vw;
+    justify-content: flex-start;
+    height: 400px;
     img {
-      border: 2px solid #e6e8ed;
       border-radius: 100%;
       margin-bottom: 10px;
-      width: 10vw;
-      height: 10vw;
+      width: 8vw;
+      height: 8vw;
     }
   }
   .my-content {
-
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 400px;
+    .user-nav {
+      border-bottom: 1px solid #f2f4f7;
+      padding-right: 60px;
+      width: 600px;
+      a {
+        color: #000;
+      }
+      li {
+        margin-right: 35px;
+      }
+    }
   }
 }
