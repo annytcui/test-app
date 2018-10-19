@@ -28,4 +28,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal firstname, @user.firstname
     assert_equal gender, @user.gender
   end
+
+  test "should redirect update when not logged in" do
+    patch user_path(@user), params: { user: { gender: :male } }
+    assert_redirected_to root_path
+  end
 end
