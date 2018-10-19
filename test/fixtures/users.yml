@@ -2,4 +2,10 @@ anny:
   firstname: Anny
   lastname: Cui
   email: anny@cutey.com
-  password_digest: <%= User.digest('password') %>
+  password_digest: <%= User.digest('password123') %>
+
+mark:
+  firstname: Mark
+  lastname: Pan
+  email: mark@sheetupid.com
+  password_digest: <%= User.digest('password123') %>
