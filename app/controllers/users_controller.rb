@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(update_params)
       # Handle a successful update.
     else
-      render 'edit'
+      render 'show'
     end
   end
 
