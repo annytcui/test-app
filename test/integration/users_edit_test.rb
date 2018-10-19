@@ -7,6 +7,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "unsuccessful edits" do
+    log_in_as(@user)
     get user_path(@user)
     assert_template 'users/show'
     patch user_path(@user), params: { user: { firstname: "",
@@ -16,6 +17,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "successful edit" do
+    log_in_as(@user)
     get user_path(@user)
     assert_template 'users/show'
     firstname = "Anny"
