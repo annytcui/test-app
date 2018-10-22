@@ -4,9 +4,29 @@ anny:
   email: anny@cutey.com
   password_digest: <%= User.digest('password123') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 mark:
   firstname: Mark
   lastname: Pan
   email: mark@sheetupid.com
   password_digest: <%= User.digest('password123') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+pikachu:
+  firstname: Pikachu
+  lastname: Pan
+  email: pikachu@leadership.com
+  password_digest: <%= User.digest('password123') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+mark:
+  firstname: Panda
+  lastname: Pan
+  email: panda@sheetupid.com
+  password_digest: <%= User.digest('password123') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
