@@ -11,8 +11,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     get user_path(@user)
     assert_template 'users/show'
     patch user_path(@user), params: { user: { firstname: "",
-          lastname: "", gender: "female",
-          birthday: "" } }
+          lastname: "", gender: "", birthday: "" } }
+    assert_redirected_to @user
+    follow_redirect!
     assert_template 'users/show'
   end
 
@@ -23,14 +24,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     firstname = "Anny"
     lastname = "Cui Pan"
     gender = :female
-    patch user_path(@user), params: { user: { firstname: firstname, lastname: lastname, gender: gender, birthday: { year: "2017" } } }
+    patch user_path(@user), params: { user: { firstname: firstname, lastname: lastname, gender: gender, birthday: { year: "2017", month: "10", day: "16" } } }
     @user.reload
-    assert_equal firstname, @user.firstname
+    assert_equal lastname, @user.lastname
     assert_equal gender, @user.gender
-  end
-
-  test "should redirect update when not logged in" do
-    patch user_path(@user), params: { user: { gender: :male } }
-    assert_redirected_to root_path
   end
 end
