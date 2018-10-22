@@ -135,7 +135,7 @@ footer {
     }
   }
   .my-content {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -152,9 +152,7 @@ footer {
       }
     }
     .user-forms {
-      align-items: center;
-      display: flex;
-
+      margin: 60px auto auto 15px;
       .update-form {
 
       }
