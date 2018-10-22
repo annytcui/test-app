@@ -4,3 +4,10 @@ User.create!(firstname: "Baozi",
               password: "password123",
               password_confirmation: "password123",
               admin: true)
+
+
+User.create!(firstname: "Panda",
+              lastname: "Non-admin",
+              email: "panda@ssssssb.com",
+              password: "password123",
+              password_confirmation: "password123")
