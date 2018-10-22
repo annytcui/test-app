@@ -4,6 +4,10 @@
   <aside class="my-profile col-4">
     <%= image_tag "default.png" %>
     <h6 class="font-weight-heavy"><%= full_name(@user) %></h6>
+    <% if current_user.admin? && !current_user?(@user) %>
+      <%= link_to "delete", @user, method: :delete,
+                      data: { confirm: "You sure?" } %>
+    <% end %>
   </aside>
 
   <div class="my-content col-8">
