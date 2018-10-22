@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181018214042) do
+ActiveRecord::Schema.define(version: 20181022151817) do
 
   create_table "users", force: :cascade do |t|
     t.string "firstname"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20181018214042) do
     t.string "remember_digest"
     t.integer "gender_cd"
     t.date "birthday"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
