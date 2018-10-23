@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   root 'static_pages#home'
   get '/visas', to: 'static_pages#visas'
   get '/forms', to: 'static_pages#forms'
