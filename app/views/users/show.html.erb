@@ -1,10 +1,55 @@
 <% provide(:title, full_name(@user)) %>
 
-<div class="user-container">
-  <div class="my-profile">
+<div class="flash-message">
+  <%= render 'shared/flash' %>
+</div>
+<div class="user-container row">
+  <aside class="my-profile col-4">
     <%= image_tag "default.png" %>
-    <h5 class="font-weight-normal"><%= full_name(@user) %></h5>
-  </div>
-  <div class="my-content">
+    <h6 class="font-weight-heavy"><%= full_name(@user) %></h6>
+    <% if current_user.admin? && !current_user?(@user) %>
+      <%= link_to "delete", @user, method: :delete,
+                      data: { confirm: "You sure?" } %>
+    <% end %>
+  </aside>
+
+  <div class="my-content col-8">
+
+    <ul class="nav user-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Timeline</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blogs</a>
+      </li>
+    </ul>
+
+    <div class="user-forms">
+
+      <div class="update-form">
+        <%= bootstrap_form_for(@user, url: user_path(@user), method: :patch, html: { class: 'profile-form' }) do |f| %>
+          <div class="row">
+            <%= f.label "First name", class: "col" %>
+            <%= f.text_field :firstname, hide_label: true, class: "col" %>
+          </div>
+          <div class="row">
+            <%= f.label "Last name", class: "col" %>
+            <%= f.text_field :lastname, hide_label: true, class: "col" %>
+          </div>
+          <div class="row">
+            <%= f.label "Gender", class: "col" %>
+            <%= f.select :gender, User.genders.keys, hide_label: true, class: "col" %>
+          </div>
+          <div class="row">
+            <%= f.label "Birthday", class: "col" %>
+            <%= f.date_select :birthday, hide_label: true, class: "col" %>
+          </div>
+          <%= f.submit "Save", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
