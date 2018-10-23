@@ -1,5 +1,8 @@
 <% provide(:title, full_name(@user)) %>
 
+<div class="flash-message">
+  <%= render 'shared/flash' %>
+</div>
 <div class="user-container row">
   <aside class="my-profile col-4">
     <%= image_tag "default.png" %>
@@ -47,8 +50,6 @@
           <%= f.submit "Save", class: "btn btn-primary" %>
         <% end %>
       </div>
-
     </div>
   </div>
-
 </div>

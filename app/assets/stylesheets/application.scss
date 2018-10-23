@@ -4,6 +4,12 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+/* flash */
+.flash-message {
+  margin: 20px auto 0;
+  width: 900px;
+}
+
 /* forms */
 .signup-form {
   width: 80%;

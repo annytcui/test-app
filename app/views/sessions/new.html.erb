@@ -1,12 +1,7 @@
 <% provide(:title, "Log in") %>
 
 <div class="login-container">
-  <div class="alert alert-warning alert-dismissible fade show" role="alert" hidden>
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
+  <%= render 'shared/flash' %>
   <h1 class="font-weight-light">Log in</h1>
   <div class="signin-form">
     <%= bootstrap_form_with(url: "/login", local: true) do |f| %>

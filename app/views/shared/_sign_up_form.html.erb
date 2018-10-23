@@ -1,9 +1,5 @@
 <div class="signup-form">
-  <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>">
-      <%= message %>
-    </div>
-  <% end %>
+  <%= render 'shared/flash' %>
   <%= bootstrap_form_with(model: @user, local: true, url: signup_path) do |f| %>
     <div class="form-row">
       <div class="col">
