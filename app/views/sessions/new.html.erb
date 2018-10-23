@@ -1,7 +1,9 @@
 <% provide(:title, "Log in") %>
 
 <div class="login-container">
-  <%= render 'shared/flash' %>
+  <div class="flash-message">
+    <%= render 'shared/flash' %>
+  </div>
   <h1 class="font-weight-light">Log in</h1>
   <div class="signin-form">
     <%= bootstrap_form_with(url: "/login", local: true) do |f| %>
