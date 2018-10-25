@@ -1,0 +1,14 @@
+<% provide(:title, "Forgot password") %>
+
+<div class="flash-message">
+  <%= render 'shared/flash' %>
+</div>
+<div class="reset-container">
+  <h1 class="font-weight-light">Password reset</h1>
+  <div class="reset-form">
+    <%= bootstrap_form_with(url: password_resets_path, local: true) do |f| %>
+      <%= f.email_field :email %>
+      <%= f.submit "Reset password", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

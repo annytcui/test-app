@@ -15,18 +15,30 @@
   width: 80%;
 }
 
-.signin-form {
-  margin-top: 20px;
-  width: 400px;
-}
-
 .login-container {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 65vh;
   justify-content: center;
+  .signin-form {
+    margin-top: 20px;
+    width: 400px;
+  }
 }
+
+.reset-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+  justify-content: center;
+  .reset-form {
+    margin: 30px auto;
+    width: 400px;
+  }
+}
+
 
 /* Profiles */
 .profile-container {
