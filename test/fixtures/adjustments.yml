@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cis_office: MyString
+  filed: 2018-10-25
+  noa: 2018-10-25
+  rfe: 2018-10-25
+  bio_appt: 2018-10-25
+  interview: 2018-10-25
+  interview_result: MyString
+  card_received: 2018-10-25
+
+two:
+  cis_office: MyString
+  filed: 2018-10-25
+  noa: 2018-10-25
+  rfe: 2018-10-25
+  bio_appt: 2018-10-25
+  interview: 2018-10-25
+  interview_result: MyString
+  card_received: 2018-10-25

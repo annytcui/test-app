@@ -10,7 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181023220213) do
+ActiveRecord::Schema.define(version: 20181025211511) do
+
+  create_table "adjustments", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "cis_office"
+    t.date "filed"
+    t.date "noa"
+    t.date "rfe"
+    t.date "bio_appt"
+    t.date "interview"
+    t.string "interview_result"
+    t.date "card_received"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_adjustments_on_user_id", unique: true
+  end
+
+  create_table "kvisas", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "center"
+    t.string "consulate"
+    t.date "sent"
+    t.date "noa_1"
+    t.date "rfe"
+    t.date "rfe_reply"
+    t.date "noa_2"
+    t.date "nvc_received"
+    t.date "case_created"
+    t.date "nvc_left"
+    t.date "consulate_received"
+    t.date "p3_received"
+    t.date "p3_sent"
+    t.date "p4_received"
+    t.date "interview"
+    t.string "interview_result"
+    t.date "visa_received"
+    t.date "us_entry"
+    t.date "marriage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_kvisas_on_user_id", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "firstname"
