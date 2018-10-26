@@ -158,21 +158,34 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     height: 400px;
-    .user-nav {
-      border-bottom: 1px solid #f2f4f7;
-      padding-right: 60px;
-      width: 600px;
-      a {
-        color: #000;
-      }
-      li {
-        margin-right: 35px;
+
+    .nav-container {
+      height: 60px;
+      .user-nav {
+        border-bottom: 1px solid #f2f4f7;
+        width: 650px;
+        li {
+          margin-right: 30px;
+          &:hover {
+            border-bottom: 1.5px solid #bdbfc1;
+          }
+        }
+        button {
+          color: #4a4b4c;
+        }
+        li.active {
+          border-bottom: 1.5px solid #2272c1;
+        }
       }
     }
-    .user-forms {
-      margin: 60px auto auto 15px;
-      .update-form {
 
+    .user-forms {
+      margin: 40px auto auto 15px;
+      .displayforms {
+        display: none;
+      }
+      #profileform {
+        display: block;
       }
     }
   }
