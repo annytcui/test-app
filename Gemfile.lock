@@ -262,12 +262,14 @@ DEPENDENCIES
   jbuilder (= 2.7.0)
   jquery-rails (= 4.3.1)
   listen
+  loofah (>= 2.2.3)
   mini_magick (= 4.7.0)
   minitest (= 5.10.3)
   minitest-reporters (= 1.1.14)
   pg (= 0.20.0)
   pry-rails
   puma (= 3.9.1)
+  rack (>= 2.0.6)
   rails (~> 5.1.6)
   rails-controller-testing (= 1.0.2)
   sassc
