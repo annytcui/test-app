@@ -3,12 +3,9 @@ class StaticPagesController < ApplicationController
     @user = User.new
   end
 
-  def visas
+  def blogs
   end
 
-  def forms
-  end
-
-  def community
+  def forum
   end
 end
