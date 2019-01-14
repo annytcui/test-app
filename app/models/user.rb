@@ -15,9 +15,6 @@ class User < ApplicationRecord
             Format: { with: VALID_PW_REGEX },
             allow_nil: true
 
-  # Add an enum for gender
-  as_enum :gender, female: 1, male: 0
-
   # Returns the hash digest of the given string.
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

@@ -1,26 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Test App (Panda Visas)
 
-Things you may want to cover:
+This is a test app for my web platform for sharing US visa application experience - Panda Visas.
 
-* Ruby version
+## Getting started
 
-* System dependencies
+To get started with the app, clone the repo and then install the needed gems:
 
-* Configuration
+```
+$ bundle install --without production
+```
 
-* Database creation
+Next, migrate the database:
 
-* Database initialization
+```
+$ rails db:migrate
+```
 
-* How to run the test suite
+Finally, run the test suite to verify that everything is working correctly:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ rails test
+```
 
-* Deployment instructions
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* ...
+```
+$ rails server
+```
+
+For more information, contact me at [tianyuancuipan@gmail.com](mailto:tianyuancuipan@gmail.com).
 
 Website: https://floating-crag-87039.herokuapp.com/
