@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.6'
 gem 'bootstrap', '~> 4.1.3'
 gem 'puma', '3.9.1'
-gem 'sass-rails'
+gem 'sassc'
 gem 'uglifier', '3.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -23,7 +23,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
 gem "bootstrap_form", ">= 4.0.0.alpha1"
-gem 'simple_enum', '~> 2.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Capistrano for deployment
