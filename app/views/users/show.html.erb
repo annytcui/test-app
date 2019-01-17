@@ -39,14 +39,6 @@
             <%= f.label "Last name", class: "col" %>
             <%= f.text_field :lastname, hide_label: true, class: "col" %>
           </div>
-          <div class="row">
-            <%= f.label "Gender", class: "col" %>
-            <%= f.select :gender, User.genders.keys, hide_label: true, class: "col" %>
-          </div>
-          <div class="row">
-            <%= f.label "Birthday", class: "col" %>
-            <%= f.date_select :birthday, hide_label: true, class: "col" %>
-          </div>
           <%= f.submit "Save", class: "btn btn-primary" %>
         <% end %>
       </div>
